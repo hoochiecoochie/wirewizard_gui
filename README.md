@@ -4,7 +4,7 @@ This is GUI wrapper for WireViz project. You can create cable assemblies drawing
 To run on Win10:
 in CMD:
 
-1) cd <ProjectPath>\wireviz_gui
+1) cd <ProjectPath>\wirewizard_gui
 2) python -m venv .venv
 3) .venv\Scripts\activate.bat
 4) python -m pip install -r requirements.txt
