@@ -40,9 +40,9 @@ in CMD:
 3) .venv\Scripts\activate.bat
 4) python -m pip install -r requirements.txt
 
-if needed, install:
+ install:
 
-5) pip install wireviz
+5) Graphviz from here:  https://graphviz.org/download/
 
 6) cd..
 7) python -m wirewizard_gui.app
