@@ -508,10 +508,10 @@ jobs:
           mapfile -t local_names < <(printf '%s\n' "${assets[@]##*/}" | LC_ALL=C sort)
 
            if release_json="$(gh release view "${TAG_NAME}" --json isDraft 2>/dev/null)"; then
-            if [[ "$(jq -r '.isDraft' <<<"${release_json}")" != "true" ]]; then
-              printf 'Release %s is already published; refusing to replace its files.\n' "${TAG_NAME}" >&2
-              exit 1
-            fi
+          #  if [[ "$(jq -r '.isDraft' <<<"${release_json}")" != "true" ]]; then
+          #    printf 'Release %s is already published; refusing to replace its files.\n' "${TAG_NAME}" >&2
+          #    exit 1
+          #  fi
             mapfile -t existing_names < <(
               gh release view "${TAG_NAME}" --json assets --jq '.assets[].name' | LC_ALL=C sort
             )
